@@ -1,5 +1,8 @@
-from .app import app
+from flask import Blueprint
 
-@app.route("/")
+blueprint = Blueprint('hello', __name__)
+
+
+@blueprint.route("/")
 def hello():
     return "Hello World!"
